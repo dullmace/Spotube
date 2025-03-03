@@ -3,5 +3,3 @@ google-api-python-client==2.94.0
 Pillow==10.0.1
 requests==2.31.0
 tkintertable==1.3.3
-tkinter
-argparse
