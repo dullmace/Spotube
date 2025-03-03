@@ -3,6 +3,9 @@
 **Spotube** is a Python-based application that syncs your Spotify playback with YouTube, automatically finding and playing the corresponding music video for the currently playing Spotify track.  
 
 So you don't have to... awkwardly search for it yourself.  
+
+<br>
+
 <img src="https://raw.githubusercontent.com/dullmace/spottube/main/appicon.png" alt="logo" width="200"/>
 
 ---
