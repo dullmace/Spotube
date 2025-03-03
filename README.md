@@ -7,6 +7,7 @@ So you don't have to... awkwardly search for it yourself.
 ![Spotube](https://raw.githubusercontent.com/dullmace/spottube/main/appicon.png)
 
 ---
+<br>
 
 ## ✨ Features
 
@@ -19,6 +20,7 @@ So you don't have to... awkwardly search for it yourself.
 
   
 ---
+<br>
 
 ## 📋 Requirements
 
@@ -29,13 +31,13 @@ So you don't have to... awkwardly search for it yourself.
 
   
 ---
-
+  <br>
+  
 ## 🚀 Installation
 
 Welcome! Follow these steps to get started with Spotube. Whether you're a beginner or an experienced developer, this guide will walk you through the process.
-
----
-
+  <br>
+  
 ### 🏃‍♂️ Quick Start
 
 #### Option 1: **Clone the repository using Git**  
@@ -60,10 +62,11 @@ If you don’t want to use Git, you can manually download the code:
    ```bash
    cd path/to/spotube
    ```
-
+   
+  <br>
+  
 ---
 
-  
 ### 🖥️ Install Dependencies
 
 Spotube uses Python, so you'll need to install the required libraries. Run the following command in the terminal (inside the Spotube folder):
@@ -73,10 +76,11 @@ pip install -r requirements.txt
 ```
 
 > 💡 *Tip*: Make sure you have Python installed. If not, [download it here](https://www.python.org/downloads/). During installation, check the box to "Add Python to PATH."
-
+   
+  <br>
+  
 ---
 
-  
 ### 🖥️ Installing MPV
 
 #### **Windows**
@@ -163,10 +167,11 @@ The easiest way to install MPV on Windows is by using **Chocolatey**, a package 
    ```bash
    mpv --version
    ```
-
+   
+  <br>
+  
 ---
 
-  
 ### 🎉 Run the Application
 
 Once everything is set up, you’re ready to run Spotube! Simply execute:
@@ -176,10 +181,11 @@ python spotube.py
 ```
 
 > 💡 *Tip*: If you encounter any issues, double-check the steps above or visit the [Spotube GitHub Issues page](https://github.com/dullmace/spotube/issues) for help.
-
----
-
-    
+   
+  <br>
+  
+--- 
+  
 ## ⚙️ Configuration
 
 Spotube requires API credentials to connect with Spotify and YouTube.  
@@ -211,9 +217,11 @@ On the first run, it will create a `config.json` file that you'll need to config
 8. Copy your new API key and paste it into the app's settings.
 
 > **Note**: The free tier allows 10,000 queries per day, which is plenty for personal use.
-
----
+   
+  <br>
   
+---
+
 ## 🎮 Usage
 
 1. Start playing music on Spotify.
@@ -221,9 +229,11 @@ On the first run, it will create a `config.json` file that you'll need to config
 3. Spotube will detect your current track and find the matching YouTube video.
 4. The video will play in an MPV window, synchronized with your Spotify playback.
 5. As you change tracks in Spotify, Spotube automatically updates the video.
-
+   
+  <br>
+  
 ---
-
+  
 ## 🔧 Advanced Configuration
 
 You can edit the `config.json` file or use the Settings dialog to customize:
@@ -248,9 +258,10 @@ You can edit the `config.json` file or use the Settings dialog to customize:
   }
 }
 ```
-
+   
+  <br>
+  
 ---
-
   
 ## 🔍 Troubleshooting
 
@@ -261,9 +272,10 @@ You can edit the `config.json` file or use the Settings dialog to customize:
 | **YouTube API Errors**         | Confirm your API key is valid and has the YouTube Data API enabled.     |
 | **No Videos Playing**          | Make sure you have an active Spotify playback session.                  |
 | **High CPU Usage**             | Increase the check interval in settings.                               |
-
+   
+  <br>
+  
 ---
-
   
 ## 🛠️ Development
 
@@ -272,25 +284,29 @@ Spotube is built with:
 - **Spotipy** for Spotify API integration
 - **Google API Client** for YouTube API access
 - **MPV** for video playback
-
+   
+  <br>
+  
 ---
-
   
 ## 📄 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
+   
+  <br>
+  
 ---
-
   
 ## 🙏 Acknowledgments
 
 - [Spotipy](https://github.com/plamere/spotipy) for the excellent Spotify API wrapper.
 - [MPV](https://mpv.io/) for the powerful and lightweight video player.
 - [Google API Python Client](https://github.com/googleapis/google-api-python-client) for YouTube API access.
-
+   
+  <br>
+  
 ---
-
+  
 **Disclaimer**: Spotube is an unofficial application and is not affiliated with, endorsed by, or connected to Spotify or YouTube.  
 
 Enjoy syncing your Spotify tracks with YouTube videos effortlessly! 🎵🎥
