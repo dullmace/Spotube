@@ -1,12 +1,10 @@
+<img src="https://raw.githubusercontent.com/dullmace/spottube/main/appicon.png" alt="logo" width="200"/>
+
 # Spotube
 
 **Spotube** is a Python-based application that syncs your Spotify playback with YouTube, automatically finding and playing the corresponding music video for the currently playing Spotify track.  
 
 So you don't have to... awkwardly search for it yourself.  
-
-<br>
-
-<img src="https://raw.githubusercontent.com/dullmace/spottube/main/appicon.png" alt="logo" width="200"/>
 
 ---
 <br>
@@ -20,10 +18,39 @@ So you don't have to... awkwardly search for it yourself.
 - **GUI Interface**: User-friendly interface built with Tkinter.
 - **Cross-Platform**: Works on Windows, macOS, and Linux.
 
-  
 ---
+
 <br>
 
+## 🔥Screenshots
+#### Spotube Main Panel & Settings
+
+<p float="left">
+<img src="https://i.imgur.com/ibWtnbQ.png" alt="Spotube Program" width="300">
+<img src="https://i.imgur.com/1kBQd6X.png" alt="Setting Panel" width="300">
+</p>
+
+#### In-Use
+
+<img src="https://i.imgur.com/c8EhJMF.jpeg" alt="Spotube Working" width="500">
+
+
+---
+
+<br>
+
+## 🎮 Usage
+
+1. Start playing music on Spotify.
+2. Launch Spotube and click **Start Monitoring**.
+3. Spotube will detect your current track and find the matching YouTube video.
+4. The video will play in an MPV window, synchronized with your Spotify playback.
+5. As you change tracks in Spotify, Spotube automatically updates the video.
+   
+---
+
+<br>
+  
 ## 📋 Requirements
 
 1. **Spotify Premium Account**: Required for playback control.
@@ -51,6 +78,8 @@ cd spotube
 ```
 
 > 💡 *Tip*: If you don’t have Git installed, [download it here](https://git-scm.com/downloads) and follow the installation instructions.
+
+<br>
 
 #### Option 2: **Manually download the code**  
 If you don’t want to use Git, you can manually download the code:
@@ -175,11 +204,12 @@ The easiest way to install MPV on Windows is by using **Chocolatey**, a package 
    mpv --version
    ```
    
-  <br>
   </details>
 
   </h4>
   
+<br>
+    
 ---
 
 ### 🎉 Run the Application
@@ -234,21 +264,11 @@ On the first run, it will create a `config.json` file that you'll need to config
 
 > **Note**: The free tier allows 10,000 queries per day, which is plenty for personal use.
    </details>
-  <br>
-  
----
-
-## 🎮 Usage
-
-1. Start playing music on Spotify.
-2. Launch Spotube and click **Start Monitoring**.
-3. Spotube will detect your current track and find the matching YouTube video.
-4. The video will play in an MPV window, synchronized with your Spotify playback.
-5. As you change tracks in Spotify, Spotube automatically updates the video.
    
   <br>
   
 ---
+
   
 ## 🔧 Advanced Configuration
 
