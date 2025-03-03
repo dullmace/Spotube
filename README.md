@@ -6,7 +6,6 @@ So you don't have to... awkwardly search for it yourself.
 
 ![Spotube](https://raw.githubusercontent.com/dullmace/spottube/main/appicon.png)
 
-![GitHub all releases](https://img.shields.io/github/downloads/dullmace/spotube/total)
 ---
 
 ## ✨ Features
