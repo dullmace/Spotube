@@ -15,8 +15,6 @@ So you don't have to... awkwardly search for it yourself.
 - **YouTube Sync**: Searches for and plays the official music video on YouTube.
 - **MPV Player Support**: Plays YouTube videos seamlessly using the MPV media player.
 - **Customizable Settings**: Configure Spotify, YouTube, and playback preferences.
-- **GUI Interface**: User-friendly interface built with Tkinter.
-- **Cross-Platform**: Works on Windows, macOS, and Linux.
 
 ---
 
