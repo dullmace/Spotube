@@ -75,6 +75,7 @@ So you don't have to... awkwardly search for it yourself.
 
 ---
 <br>  
+
 ## 📋 Requirements
 
 1. [**Spotify Premium Account & API Key**](#spotify-api): Required for playback control.
