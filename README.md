@@ -6,6 +6,7 @@ So you don't have to... awkwardly search for it yourself.
 
 ![Spotube](https://raw.githubusercontent.com/dullmace/spottube/main/appicon.png)
 
+![GitHub all releases](https://img.shields.io/github/downloads/dullmace/spotube/total)
 ---
 
 ## ✨ Features
@@ -17,6 +18,7 @@ So you don't have to... awkwardly search for it yourself.
 - **GUI Interface**: User-friendly interface built with Tkinter.
 - **Cross-Platform**: Works on Windows, macOS, and Linux.
 
+  
 ---
 
 ## 📋 Requirements
@@ -26,41 +28,160 @@ So you don't have to... awkwardly search for it yourself.
 3. **MPV Media Player**: For video playback. [Download MPV](https://mpv.io/).
 4. **Python 3.7+**: Ensure you have Python installed.
 
+  
 ---
 
 ## 🚀 Installation
 
-### Quick Start
+Welcome! Follow these steps to get started with Spotube. Whether you're a beginner or an experienced developer, this guide will walk you through the process.
 
-1. Clone the repository:
+---
+
+### 🏃‍♂️ Quick Start
+
+#### Option 1: **Clone the repository using Git**  
+If you have Git installed, you can download the Spotube code by running the following commands in your terminal:
+
+```bash
+git clone https://github.com/your-username/spotube.git
+cd spotube
+```
+
+> 💡 *Tip*: If you don’t have Git installed, [download it here](https://git-scm.com/downloads) and follow the installation instructions.
+
+#### Option 2: **Manually download the code**  
+If you don’t want to use Git, you can manually download the code:
+
+1. Go to the [Spotube GitHub repository](https://github.com/dullmace/spotube).  
+2. Click the green **Code** button near the top right of the page.  
+3. Select **Download ZIP** from the dropdown menu.  
+4. Once the ZIP file is downloaded, extract it to a folder of your choice.  
+5. Open a terminal and navigate to the extracted folder. For example:
+
    ```bash
-   git clone https://github.com/your-username/spotube.git
-   cd spotube
-   ```
-
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Install MPV:
-   - **Windows**: Download the installer from [MPV's website](https://mpv.io/installation/).
-   - **macOS**: Install via Homebrew:
-     ```bash
-     brew install mpv
-     ```
-   - **Linux**: Install via your package manager:
-     ```bash
-     sudo apt install mpv  # For Debian/Ubuntu
-     ```
-
-4. Run the application:
-   ```bash
-   python spotube.py
+   cd path/to/spotube
    ```
 
 ---
 
+  
+### 🖥️ Install Dependencies
+
+Spotube uses Python, so you'll need to install the required libraries. Run the following command in the terminal (inside the Spotube folder):
+
+```bash
+pip install -r requirements.txt
+```
+
+> 💡 *Tip*: Make sure you have Python installed. If not, [download it here](https://www.python.org/downloads/). During installation, check the box to "Add Python to PATH."
+
+---
+
+  
+### 🖥️ Installing MPV
+
+#### **Windows**
+
+The easiest way to install MPV on Windows is by using **Chocolatey**, a package manager for Windows.
+
+1. **Open a terminal as Administrator**  
+   - Press **Win+X** and select one of the following:
+     - Windows PowerShell (Admin)
+     - Command Prompt (Admin)
+     - Terminal (Admin)
+
+2. **Install Chocolatey** (if you don’t already have it):  
+   Copy and paste the following command into the terminal and press Enter:
+
+   ```powershell
+   Set-ExecutionPolicy Bypass -Scope Process -Force; `
+   [System.Net.ServicePointManager]::SecurityProtocol = `
+   [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; `
+   iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+   ```
+
+   > 💡 *Tip*: If you already have Chocolatey installed, you can skip this step.
+
+3. **Install MPV using Chocolatey**:  
+   Run the following command:
+
+   ```bash
+   choco install mpv
+   ```
+
+4. **Verify the installation**:  
+   Check if MPV is installed correctly by running:
+
+   ```bash
+   mpv --version
+   ```
+
+   If you see the version number, you're good to go!
+
+---
+
+#### **macOS**
+
+1. Install **Homebrew**, a package manager for macOS, if you don’t already have it. Follow the instructions at [brew.sh](https://brew.sh/).  
+2. Use Homebrew to install MPV:
+
+   ```bash
+   brew install mpv
+   ```
+
+3. Verify the installation:
+
+   ```bash
+   mpv --version
+   ```
+
+---
+
+#### **Linux**
+
+1. Use your system's package manager to install MPV. For example:
+
+   - **Debian/Ubuntu**:
+
+     ```bash
+     sudo apt install mpv
+     ```
+
+   - **Fedora**:
+
+     ```bash
+     sudo dnf install mpv
+     ```
+
+   - **Arch Linux**:
+
+     ```bash
+     sudo pacman -S mpv
+     ```
+
+2. Verify the installation:
+
+   ```bash
+   mpv --version
+   ```
+
+---
+
+  
+### 🎉 Run the Application
+
+Once everything is set up, you’re ready to run Spotube! Simply execute:
+
+```bash
+python spotube.py
+```
+
+> 💡 *Tip*: If you encounter any issues, double-check the steps above or visit the [Spotube GitHub Issues page](https://github.com/your-username/spotube/issues) for help.
+
+---
+
+
+    
 ## ⚙️ Configuration
 
 Spotube requires API credentials to connect with Spotify and YouTube.  
@@ -95,6 +216,7 @@ On the first run, it will create a `config.json` file that you'll need to config
 
 ---
 
+  
 ## 🎮 Usage
 
 1. Start playing music on Spotify.
@@ -105,6 +227,7 @@ On the first run, it will create a `config.json` file that you'll need to config
 
 ---
 
+  
 ## 🔧 Advanced Configuration
 
 You can edit the `config.json` file or use the Settings dialog to customize:
@@ -132,6 +255,7 @@ You can edit the `config.json` file or use the Settings dialog to customize:
 
 ---
 
+  
 ## 🔍 Troubleshooting
 
 | Issue                          | Solution                                                                 |
@@ -144,6 +268,7 @@ You can edit the `config.json` file or use the Settings dialog to customize:
 
 ---
 
+  
 ## 🛠️ Development
 
 Spotube is built with:
@@ -154,12 +279,14 @@ Spotube is built with:
 
 ---
 
+  
 ## 📄 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
 
+  
 ## 🙏 Acknowledgments
 
 - [Spotipy](https://github.com/plamere/spotipy) for the excellent Spotify API wrapper.
