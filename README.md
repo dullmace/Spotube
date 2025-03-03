@@ -44,7 +44,7 @@ Welcome! Follow these steps to get started with Spotube. Whether you're a beginn
 If you have Git installed, you can download the Spotube code by running the following commands in your terminal:
 
 ```bash
-git clone https://github.com/your-username/spotube.git
+git clone https://github.com/dullmace/spotube.git
 cd spotube
 ```
 
