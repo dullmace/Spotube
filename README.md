@@ -196,12 +196,14 @@ On the first run, it will create a `config.json` file that you'll need to config
 1. Go to the [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/).
 2. Click **Create App**.
 3. Fill in the following details:
+
    - **App name**: Spotube (or any name you prefer)
    - **App description**: Personal YouTube music video player
    - **Redirect URI**: `http://localhost:8080`
-4. Check the Developer Terms of Service and click **Create**.
-5. Copy your **Client ID** and **Client Secret**.
-6. Enter these details in the Spotube app's settings.
+4. Check **Web API**
+5. Check the Developer Terms of Service and click **Create**.
+6. Copy your **Client ID** and **Client Secret**.
+7. Enter these details in the Spotube app's settings.
 
 > **Note**: When you first run Spotube, a browser window will open asking you to authorize the app to access your Spotify account. This is normal and required for Spotube to see what you're currently playing.
 
