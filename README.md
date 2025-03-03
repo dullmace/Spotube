@@ -9,6 +9,7 @@ So you don't have to... awkwardly search for it yourself.
 ---
 <br>
 
+    
 ## ✨ Features
 
 - **Spotify Integration**: Automatically detects the currently playing track on Spotify.
@@ -48,7 +49,32 @@ So you don't have to... awkwardly search for it yourself.
 ---
 
 <br>
-  
+
+## Helpful Table of Contents
+
+ 1. **[Requirements](#-requirements)**
+    * [Spotify Premium Account & API Key](#spotify-api)
+    * [YouTube Data API Key](#yt-api)
+    * [MPV Media Player](#mpv-install)
+    * [Python 3.7+](https://www.python.org/downloads/)
+ 2. **[Installation](#-installation)**
+    * [Quick Start](#️-quick-start)
+        * [Option 1: Clone the repository using Git](#option-1-clone-the-repository-using-git)
+        * [Option 2: Manually download the code](#option-2-manually-download-the-code)
+    * [Install Dependencies](#️-install-dependencies)
+    * [Installing MPV](#️-installing-mpv)
+        * [Windows](#windows)
+        * [macOS](#macos)
+        * [Linux](#linux)
+3. **[Run the Application](#-run-the-application)**
+4. **[Configuration](#️-configuration)**
+    * [Spotify API Setup](#spotify-api)
+    * [YouTube Data API Key Setup](#yt-api)
+5. **[Advanced Configuration](#-advanced-configuration)**
+
+
+---
+<br>  
 ## 📋 Requirements
 
 1. [**Spotify Premium Account & API Key**](#spotify-api): Required for playback control.
