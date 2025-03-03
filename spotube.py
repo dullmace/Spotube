@@ -211,32 +211,6 @@ class SpotifyManager:
         except spotipy.exceptions.SpotifyException as e:
             print(f"Failed to skip to the previous track: {e}")
             return False
-    
-    def pause_playback(self) -> bool:
-        """Pause Spotify playback."""
-        sp = self.get_client()
-        if not sp:
-            return False
-        
-        try:
-            sp.pause_playback()
-            return True
-        except spotipy.exceptions.SpotifyException as e:
-            print(f"Failed to pause playback: {e}")
-            return False
-    
-    def resume_playback(self) -> bool:
-        """Resume Spotify playback."""
-        sp = self.get_client()
-        if not sp:
-            return False
-        
-        try:
-            sp.start_playback()
-            return True
-        except spotipy.exceptions.SpotifyException as e:
-            print(f"Failed to resume playback: {e}")
-            return False
 
 
 class YouTubeManager:
@@ -693,13 +667,9 @@ class SpotubeGUI:
     def update_ui_state(self):
         """Update UI elements based on current state."""
         if self.running:
-            self.start_button.state(['disabled'])
-            self.stop_button.state(['!disabled'])
             self.status_var.set("Running")
             self.status_indicator.configure(foreground=self.accent_color)
         else:
-            self.start_button.state(['!disabled'])
-            self.stop_button.state(['disabled'])
             self.status_var.set("Not Running")
             self.status_indicator.configure(foreground=self.secondary_color)
     
