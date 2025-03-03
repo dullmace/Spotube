@@ -177,6 +177,7 @@ The easiest way to install MPV on Windows is by using **Chocolatey**, a package 
   </details>
 
   </h4>
+  
 ---
 
 ### 🎉 Run the Application
