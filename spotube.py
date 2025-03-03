@@ -5,14 +5,17 @@ Spotube: We sync Spotify to YouTube so you don't have to... awkwardly search you
 
 import json
 import os
+import html
 import subprocess
 import threading
 import time
+import io
 from itertools import cycle
 from typing import Any, Dict, Optional
 import argparse
 import webbrowser
 from pathlib import Path
+import urllib.request
 
 import tkinter as tk
 from tkinter import ttk, messagebox, filedialog
@@ -259,12 +262,18 @@ class YouTubeManager:
             video_title = response["items"][0]["snippet"]["title"]
             thumbnail_url = response["items"][0]["snippet"]["thumbnails"]["high"]["url"]
             
+            # Decode HTML entities in the video title
+            decoded_title = html.unescape(video_title)
+            
             return {
                 "url": f"https://www.youtube.com/watch?v={video_id}",
-                "title": video_title,
+                "title": decoded_title,  # Use the decoded title here
                 "id": video_id,
                 "thumbnail_url": thumbnail_url
             }
+        except Exception as e:
+            print(f"Error searching for video: {e}")
+            return None
         except HttpError as e:
             print(f"YouTube API error: {e}")
             return None
@@ -441,12 +450,13 @@ class SpotubeGUI:
         
         # Logo (app icon only)
         try:
-            # Load and resize appicon
+            # First try local path
             icon_path = Path(__file__).parent / "appicon.png"
+            header_height = 60
+            aspect_ratio = 450 / 315
+            header_width = int(header_height * aspect_ratio)
+            
             if icon_path.exists():
-                header_height = 60
-                aspect_ratio = 450 / 315
-                header_width = int(header_height * aspect_ratio)
                 app_icon = Image.open(icon_path)
                 app_icon = app_icon.resize((header_width, header_height), Image.LANCZOS)
                 app_icon_img = ImageTk.PhotoImage(app_icon)
@@ -454,17 +464,26 @@ class SpotubeGUI:
                 icon_label.image = app_icon_img  # Keep a reference to prevent garbage collection
                 icon_label.pack(side=tk.LEFT)
             else:
-                # Fallback to text if image not found
-                title_label = ttk.Label(
-                    header_frame, 
-                    text="Spotube", 
-                    font=("Helvetica", 24, "bold"),
-                    foreground=self.accent_color
-                )
-                title_label.pack(side=tk.LEFT)
+                # If local file doesn't exist, fetch from GitHub
+                github_url = "https://raw.githubusercontent.com/dullmace/spottube/main/appicon.png"
+                app_icon_img = self.load_image_from_url(github_url, header_width, header_height)
+                
+                if app_icon_img:
+                    icon_label = ttk.Label(header_frame, image=app_icon_img)
+                    icon_label.image = app_icon_img  # Keep a reference to prevent garbage collection
+                    icon_label.pack(side=tk.LEFT)
+                else:
+                    # Fallback to text if image not found
+                    title_label = ttk.Label(
+                        header_frame, 
+                        text="Spotube", 
+                        font=("Helvetica", 24, "bold"),
+                        foreground=self.accent_color
+                    )
+                    title_label.pack(side=tk.LEFT)
         except Exception as e:
-            print(f"Failed to load app icon: {e}")
-            # Fallback to text
+            print(f"Error loading header icon: {e}")
+            # Fallback to text if there's any error
             title_label = ttk.Label(
                 header_frame, 
                 text="Spotube", 
@@ -575,11 +594,11 @@ class SpotubeGUI:
         video_details_frame = ttk.Frame(video_frame)
         video_details_frame.pack(fill=tk.X, pady=5)
         
-        self.video_title_var = tk.StringVar(value="No video playing")
+        self.decoded_title_var = tk.StringVar(value="No video playing")
         
         ttk.Label(
             video_details_frame, 
-            textvariable=self.video_title_var,
+            textvariable=self.decoded_title_var,
             font=("Helvetica", 12, "bold"),
             wraplength=250
         ).pack(anchor=tk.W)
@@ -694,7 +713,7 @@ class SpotubeGUI:
         except Exception as e:
             print(f"Failed to load image: {e}")
             return None
-    
+        
     def update_track_display(self, track_info):
         """Update the track display with new track information."""
         if not track_info:
@@ -731,13 +750,13 @@ class SpotubeGUI:
     def update_video_display(self, video_info):
         """Update the video display with new video information."""
         if not video_info:
-            self.video_title_var.set("No video playing")
+            self.decoded_title_var.set("No video playing")
             self.video_url_var.set("")
             self.video_thumb_label.configure(image="")
             self.video_url_link.pack_forget()
             return
         
-        self.video_title_var.set(video_info["title"])
+        self.decoded_title_var.set(video_info["title"])
         self.video_url_var.set(video_info["url"])
         self.video_url_link.pack(anchor=tk.W, pady=5)
         
@@ -1291,12 +1310,25 @@ class ConfigDialog:
         """Cancel and close the dialog."""
         self.dialog.destroy()
 
+def load_image_from_url(url):
+    """Load an image from a URL and return a PIL Image object."""
+    try:
+        with urllib.request.urlopen(url) as response:
+            image_data = response.read()
+        return Image.open(io.BytesIO(image_data))
+    except Exception as e:
+        print(f"Error loading image from URL: {e}")
+        return None
 
 def main():
     """Main entry point for the application."""
     root = tk.Tk()
     root.title("Spotube")
     
+    # Create app instance first
+    app = SpotubeGUI(root)
+    
+
     # Set icon if available
     try:
         icon_path = Path(__file__).parent / "icon.png"
@@ -1306,10 +1338,9 @@ def main():
             root.iconphoto(True, photo)
     except Exception:
         pass
-    
-    app = SpotubeGUI(root)
+        
     root.mainloop()
-
 
 if __name__ == "__main__":
     main()
+
