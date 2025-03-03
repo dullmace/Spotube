@@ -51,9 +51,9 @@ So you don't have to... awkwardly search for it yourself.
   
 ## 📋 Requirements
 
-1. **Spotify Premium Account**: Required for playback control.
-2. **YouTube Data API Key**: To search for videos on YouTube.
-3. **MPV Media Player**: For video playback. [Installation Instructions](#mpv-install).
+1. [**Spotify Premium Account & API Key**](#spotify-api): Required for playback control.
+2. [**YouTube Data API Key**](#yt-api): To search for videos on YouTube.
+3. [**MPV Media Player**](#mpv-install): For video playback.
 4. **Python 3.7+**: Ensure you have Python installed.
 
   
@@ -109,6 +109,7 @@ pip install -r requirements.txt
   <br>
   
 ---
+
 <h4 id="mpv-install">
   
 ### 🖥️ Installing MPV
@@ -231,6 +232,8 @@ python spotube.py
 Spotube requires API credentials to connect with Spotify and YouTube.  
 On the first run, it will create a `config.json` file that you'll need to configure through the Settings dialog.
 
+<h4 id="spotify-api">
+   
 ### Spotify API Setup
 <details><summary>Instructions</summary>
 1. Go to the [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/).
@@ -247,8 +250,13 @@ On the first run, it will create a `config.json` file that you'll need to config
 
 > **Note**: When you first run Spotube, a browser window will open asking you to authorize the app to access your Spotify account. This is normal and required for Spotube to see what you're currently playing.
 </details>
+
+</h4>
+
 <br>
 
+<h4 id="yt-api">
+   
 ### YouTube Data API Key Setup
 <details><summary>Instructions</summary>
 1. Go to the [Google Cloud Console](https://console.cloud.google.com/).
@@ -262,8 +270,10 @@ On the first run, it will create a `config.json` file that you'll need to config
 
 > **Note**: The free tier allows 10,000 queries per day, which is plenty for personal use.
    </details>
+
+</h4>
    
-  <br>
+<br>
   
 ---
 
