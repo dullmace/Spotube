@@ -26,7 +26,7 @@ So you don't have to... awkwardly search for it yourself.
 
 1. **Spotify Premium Account**: Required for playback control.
 2. **YouTube Data API Key**: To search for videos on YouTube.
-3. **MPV Media Player**: For video playback. [Download MPV](https://mpv.io/).
+3. **MPV Media Player**: For video playback. [Installation Instructions](#mpv-install).
 4. **Python 3.7+**: Ensure you have Python installed.
 
   
@@ -80,11 +80,13 @@ pip install -r requirements.txt
   <br>
   
 ---
-
+<h4 id="mpv-install">
 ### 🖥️ Installing MPV
 
 #### **Windows**
 
+<details><summary>Install MPV using Chocolately</summary>
+  
 The easiest way to install MPV on Windows is by using **Chocolatey**, a package manager for Windows.
 
 1. **Open a terminal as Administrator**  
@@ -120,11 +122,12 @@ The easiest way to install MPV on Windows is by using **Chocolatey**, a package 
    ```
 
    If you see the version number, you're good to go!
-
+</details>
 ---
 
 #### **macOS**
 
+<details><summary>Install MPV using Homebrew</summary>
 1. Install **Homebrew**, a package manager for macOS, if you don’t already have it. Follow the instructions at [brew.sh](https://brew.sh/).  
 2. Use Homebrew to install MPV:
 
@@ -137,11 +140,12 @@ The easiest way to install MPV on Windows is by using **Chocolatey**, a package 
    ```bash
    mpv --version
    ```
-
+</details>
 ---
 
 #### **Linux**
 
+<details><summary>Install MPV via package manager</summary>
 1. Use your system's package manager to install MPV. For example:
 
    - **Debian/Ubuntu**:
@@ -169,14 +173,18 @@ The easiest way to install MPV on Windows is by using **Chocolatey**, a package 
    ```
    
   <br>
-  
+  </details>
+
+  </h4>
 ---
 
 ### 🎉 Run the Application
 
-Once everything is set up, you’re ready to run Spotube! Simply execute:
+Once everything is set up, you’re ready to run Spotube!
+Simply execute:
 
 ```bash
+cd path/to/spotube
 python spotube.py
 ```
 
@@ -192,7 +200,7 @@ Spotube requires API credentials to connect with Spotify and YouTube.
 On the first run, it will create a `config.json` file that you'll need to configure through the Settings dialog.
 
 ### Spotify API Setup
-
+<details><summary>Instructions</summary>
 1. Go to the [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/).
 2. Click **Create App**.
 3. Fill in the following details:
@@ -206,9 +214,11 @@ On the first run, it will create a `config.json` file that you'll need to config
 7. Enter these details in the Spotube app's settings.
 
 > **Note**: When you first run Spotube, a browser window will open asking you to authorize the app to access your Spotify account. This is normal and required for Spotube to see what you're currently playing.
+</details>
+<br>
 
 ### YouTube Data API Key Setup
-
+<details><summary>Instructions</summary>
 1. Go to the [Google Cloud Console](https://console.cloud.google.com/).
 2. Sign in with your Google account.
 3. Create a new project (click on the project dropdown at the top → **New Project**).
@@ -219,7 +229,7 @@ On the first run, it will create a `config.json` file that you'll need to config
 8. Copy your new API key and paste it into the app's settings.
 
 > **Note**: The free tier allows 10,000 queries per day, which is plenty for personal use.
-   
+   </details>
   <br>
   
 ---
