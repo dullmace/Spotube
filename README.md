@@ -234,8 +234,8 @@ On the first run, it will create a `config.json` file that you'll need to config
 
 <h4 id="spotify-api">
    
-### Spotify API Setup
-<details><summary>Instructions</summary>
+### 🎵 Spotify API Setup
+
 1. Go to the [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/).
 2. Click **Create App**.
 3. Fill in the following details:
@@ -249,7 +249,7 @@ On the first run, it will create a `config.json` file that you'll need to config
 7. Enter these details in the Spotube app's settings.
 
 > **Note**: When you first run Spotube, a browser window will open asking you to authorize the app to access your Spotify account. This is normal and required for Spotube to see what you're currently playing.
-</details>
+
 
 </h4>
 
@@ -257,8 +257,8 @@ On the first run, it will create a `config.json` file that you'll need to config
 
 <h4 id="yt-api">
    
-### YouTube Data API Key Setup
-<details><summary>Instructions</summary>
+### 🎥 YouTube Data API Key Setup
+
 1. Go to the [Google Cloud Console](https://console.cloud.google.com/).
 2. Sign in with your Google account.
 3. Create a new project (click on the project dropdown at the top → **New Project**).
@@ -269,7 +269,6 @@ On the first run, it will create a `config.json` file that you'll need to config
 8. Copy your new API key and paste it into the app's settings.
 
 > **Note**: The free tier allows 10,000 queries per day, which is plenty for personal use.
-   </details>
 
 </h4>
    
