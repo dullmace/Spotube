@@ -175,10 +175,9 @@ Once everything is set up, you’re ready to run Spotube! Simply execute:
 python spotube.py
 ```
 
-> 💡 *Tip*: If you encounter any issues, double-check the steps above or visit the [Spotube GitHub Issues page](https://github.com/your-username/spotube/issues) for help.
+> 💡 *Tip*: If you encounter any issues, double-check the steps above or visit the [Spotube GitHub Issues page](https://github.com/dullmace/spotube/issues) for help.
 
 ---
-
 
     
 ## ⚙️ Configuration
@@ -214,7 +213,6 @@ On the first run, it will create a `config.json` file that you'll need to config
 > **Note**: The free tier allows 10,000 queries per day, which is plenty for personal use.
 
 ---
-
   
 ## 🎮 Usage
 
@@ -226,7 +224,6 @@ On the first run, it will create a `config.json` file that you'll need to config
 
 ---
 
-  
 ## 🔧 Advanced Configuration
 
 You can edit the `config.json` file or use the Settings dialog to customize:
